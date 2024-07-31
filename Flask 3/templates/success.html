@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Message Board</h1>
+    <table border="1">
+        <tr>
+        <th>Posting ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Message</th>
+        </tr>
+        {% for record in records %}
+            <tr class="entry">
+                <td id="id">{{ record[0] }}</td>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td><textarea id="message" rows="3">{{ record[3] }}</textarea></td>
+            </tr>
+        {% endfor %}
+    </table> 
+
+    <br>
+    <a href="{{ url_for('form') }}">Post again</a>
+
+    <div id="delete" onclick="DeleteEntry()">Delete</div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

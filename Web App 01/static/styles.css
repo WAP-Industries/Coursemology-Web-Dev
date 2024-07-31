@@ -1,0 +1,18 @@
+* {
+    user-select: none;
+}
+
+table {
+    width: 50%;
+    table-layout: fixed;
+    text-align: left;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+th, td {
+    padding-left: 5px;
+}

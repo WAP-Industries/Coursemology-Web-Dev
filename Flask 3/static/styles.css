@@ -1,0 +1,29 @@
+* {
+    user-select: none;
+}
+
+table {
+    width: 50%;
+    table-layout: fixed;
+    text-align: center;
+}
+
+#message {
+    width: 95%;
+    border: none;
+}
+
+#delete {
+    position: absolute; 
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    background: lightgrey;
+    display: none;
+}
+
+#delete:hover {
+    color: red;
+}
