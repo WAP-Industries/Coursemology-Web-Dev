@@ -19,6 +19,7 @@
         </tr>
         <!-- use jinja to loop through and display all records -->
         {% for record in records %}
+            <!-- setting the class and id will help us when making the post request and having to retrieve the data -->
             <tr class="entry">
                 <td id="id">{{ record[0] }}</td>
                 <td>{{ record[1] }}</td>
