@@ -1,12 +1,16 @@
 * {
+    /* prevents users from highlighting shit */
     user-select: none;
 }
 
 table {
+    /* table width will be half of page width */
     width: 50%;
+    /* all cells will be equally sized */
     table-layout: fixed;
     text-align: left;
 
+    /* horizontally center the table */
     position: absolute;
     right: 0;
     left: 0;
@@ -14,5 +18,6 @@ table {
 }
 
 th, td {
+    /* adds some spacing to the left of text inside table cells */
     padding-left: 5px;
 }

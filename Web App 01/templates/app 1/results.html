@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Policy Records</title>
 
+    <!-- 
+        link our css stylesheet 
+        we have to use url_for, as policy is not the root endpoint and cannot directly access the stylesheet
+    -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -16,11 +20,16 @@
         <th>Policy ID</th>
         <th>Start Date</th>
         </tr>
+        <!-- use jinja to loop through all our queries and display the results -->
         {% for record in records %}
             <tr>
                 <td>{{ record[0] }}</td>
                 <td>{{ record[1] }}</td>
                 <td>{{ record[2] }}</td>
+                <!-- 
+                    embed the link to our policy endpoint in our table cell 
+                    were also passing in the policy id as a parameter when the user connects to the endpoint
+                -->
                 <td><a href="{{ url_for('policy', id=record[3]) }}">{{ record[3] }}</a></td>
                 <td>{{ record[4] }}</td>
             </tr>

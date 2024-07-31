@@ -6,14 +6,17 @@
     <title>Customer Portal</title>
 
     <style>
+        /* styling our input box */
         input[type="text"] {
-            width: 30%;
+            /* this just makes the width 30% of the page width */
+            width: 30%; 
         }
     </style>
 </head>
 <body>
     <h1>Search</h1>
     
+    <!-- form will send a get request to our results endpoint, passing in the customer name -->
     <form action="{{ url_for('results') }}">
         <input type="text" placeholder="Enter customer name" name="customer">
     </form>

@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Policy Info</title>
-
+   
+    <!-- 
+        link our css stylesheet 
+        we have to use url_for, as policy is not the root endpoint and cannot directly access the stylesheet
+    -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -16,6 +20,7 @@
         <th>Protected Sum</th>
         <th>Commission Rate</th>
         </tr>
+            <!-- use jinja to display the sql query results -->
             <td>{{ record[0] }}</td>
             <td>{{ record[1] }}</td>
             <td>{{ record[2] }}</td>

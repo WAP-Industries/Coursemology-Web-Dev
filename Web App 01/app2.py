@@ -1,15 +1,18 @@
-import sys; sys.dont_write_bytecode = 1
+import sys; sys.dont_write_bytecode = 1 # this is just to prevent python from generating the __pycache__ bytecode
 from flask import Flask, render_template, request
 from db import *
 
 app = Flask("limpeh")
 
+# root endpoint
 @app.route("/")
 def index():
     return render_template("app 2/index.html")
 
+# results endpoint
 @app.route("/results/")
 def results():
+    # black magic
     return render_template(
         "app 2/results.html",
         records=QueryDB(

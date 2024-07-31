@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Policy Records</title>
 
+    <!-- same as in app 1 -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <th>Feb</th>
         <th>Mar</th>
         </tr>
+        <!-- same as in app 1 -->
         {% for record in records %}
             <tr>
                 <td>{{ record[0] }}</td>
