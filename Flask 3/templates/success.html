@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Board</title>
 
+    <!-- link our stylesheet using url_for, since success is not the root endpoint -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -16,6 +17,7 @@
         <th>Email</th>
         <th>Message</th>
         </tr>
+        <!-- use jinja to loop through and display all records -->
         {% for record in records %}
             <tr class="entry">
                 <td id="id">{{ record[0] }}</td>
@@ -27,10 +29,13 @@
     </table> 
 
     <br>
+    <!-- connect to our form endpoint -->
     <a href="{{ url_for('form') }}">Post again</a>
 
+    <!-- custom delete button -->
     <div id="delete" onclick="DeleteEntry()">Delete</div>
 
+    <!-- add our javascript backend code -->
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>

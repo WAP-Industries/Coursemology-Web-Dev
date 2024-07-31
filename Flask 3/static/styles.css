@@ -1,19 +1,24 @@
 * {
+    /* prevents user from highlighting text */
     user-select: none;
 }
 
 table {
+    /* table width is 50% of page width */
     width: 50%;
+    /* all table cells are equally sized */
     table-layout: fixed;
     text-align: center;
 }
 
 #message {
+    /* textboxes overflow a bit, so this just fits it into the table cell */
     width: 95%;
     border: none;
 }
 
 #delete {
+    /* just making the delete button look cool */
     position: absolute; 
     border: 1px solid black;
     border-radius: 5px;
@@ -24,6 +29,7 @@ table {
     display: none;
 }
 
+/* this ruleset is triggered when the mouse is placed over the element */
 #delete:hover {
     color: red;
 }
